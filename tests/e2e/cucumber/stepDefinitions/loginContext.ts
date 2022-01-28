@@ -8,12 +8,12 @@ Given('the user has browsed to the login page', async function (this: World) {
     await loginPage.browseToLoginPage();
 });
 
-When('the use logs in with username {username} and password {password} using the webUI', async function (this: World,username, password) {
+When('the use logs in with username {string} and password {string} using the webUI', async function (this: World, username, password) {
     const loginPage: LoginPage = new LoginPage(this.page);
-    await loginPage.fillLoginField(username, password);
+    await loginPage.logsIn(username, password);
 });
 
-Then('the user should be in homepage',async function (this: World) {
+Then('the user should be in homepage', async function (this: World) {
     const homePage: HomePage = new HomePage(this.page);
     await homePage.isOnHomePage();
 });
