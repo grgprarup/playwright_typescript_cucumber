@@ -1,4 +1,5 @@
 import { Given, Then, When } from "@cucumber/cucumber";
+import { HomePage } from "../pageObjects/HomePage";
 import { LoginPage } from "../pageObjects/LoginPage";
 import { World } from "../types";
 
@@ -13,5 +14,6 @@ When('the use logs in with username {username} and password {password} using the
 });
 
 Then('the user should be in homepage',async function (this: World) {
-
+    const homePage: HomePage = new HomePage(this.page);
+    await homePage.isOnHomePage();
 });
