@@ -7,5 +7,5 @@ Feature: login users
 
     Scenario: user login with valid credential
         Given the user has browsed to the login page
-        When the use logs in with username "admin" and password "admin" using the webUI
+        When the use logs in with username "standard_user" and password "secret_sauce" using the webUI
         Then the user should be in homepage

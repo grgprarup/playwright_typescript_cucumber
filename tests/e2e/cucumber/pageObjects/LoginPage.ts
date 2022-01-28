@@ -6,14 +6,14 @@ class LoginPage {
     loginLogo: string;
     username: string;
     password: string;
-    submitButton: string;
+    loginButton: string;
 
     constructor(page: Page) {
         this.page = page;
-        this.loginLogo = "";
-        this.username = "";
-        this.password = "";
-        this.submitButton = "";
+        this.loginLogo = ".login_logo";
+        this.username = "#user-name";
+        this.password = "#password";
+        this.loginButton = "#login-button";
     }
 
     async browseToLoginPage() {
@@ -22,10 +22,10 @@ class LoginPage {
         await expect(locator).toBeVisible();
     }
 
-    async fillLoginField(username: string, password: string) {
+    async logsIn(username: string, password: string) {
         await this.page.fill(this.username, username);
         await this.page.fill(this.password, password);
-        await this.page.click(this.submitButton);
+        await this.page.click(this.loginButton);
     }
 }
 
