@@ -1,1 +1,2 @@
 # playwright_typescript_cucumber
+To meet the demands of end-to-end testing, Playwright Test was especially developed. Chromium, WebKit, and Firefox are just a few of the contemporary rendering engines that Playwright supports. Test on Windows, Linux, and macOS, locally or through continuous integration, headless or headed, using Mobile Safari and Google Chrome for Android's native mobile emulation.
